@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const authRoute = require("./routes/auth");
+const messageRoute = require("./routes/message");
 
 dotenv.config();
 
@@ -30,6 +31,7 @@ app.use(cors({
 /////////////--
 //Routes
 app.use("/api/auth", authRoute);
+app.use("/api/message", messageRoute);
 ////////////--
 
 app.use("/", function(req, res){
