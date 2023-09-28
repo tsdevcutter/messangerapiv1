@@ -23,7 +23,7 @@ router.get("/message", async (req, res) => {
     }
 });
 //////////////////////////////////////////
-router.get("/dialogmake", async (req, res) => {
+router.post("/dialogmake", async (req, res) => {
   try{
 
     const messID    = req.query.mesid;
