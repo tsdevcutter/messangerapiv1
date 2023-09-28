@@ -6,13 +6,11 @@ const Dialogue = require("../models/Dialogue");
 
 /////////////////////////
 //list messages
-router.get("/message", async (req, res) => {
+router.get("/dialoglisting", async (req, res) => {
     try{
-            const repObject = {
-                "message": "The wild wood"
-            }
+         const repDial = await Dialogue.find();
             
-      res.status(200).json(repObject);
+      res.status(200).json(repDial);
     } catch (err) {
         console.log(err.code);
        if(err.code === 11000){
